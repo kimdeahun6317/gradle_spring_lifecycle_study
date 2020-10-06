@@ -5,6 +5,5 @@ public class Main {
 		MemberDao memberDao = new MemberDao();
 		MemberRegisterService regSvc = new MemberRegisterService(memberDao);
 		ChangePaswordService pwdSvc = new ChangePaswordService();
-		pwdSvc.setMemberDao(memberDao);
 	}
 }

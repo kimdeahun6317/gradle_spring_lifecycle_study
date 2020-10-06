@@ -1,5 +1,9 @@
 package gradle_spring_lifecycle_study.spring;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
 public class MemberInfoPrinter {
 	private MemberDao memberDao;
 	private MemberPrinter printer;
@@ -13,11 +17,13 @@ public class MemberInfoPrinter {
 		printer.print(member);
 		System.out.println();
 	}
-
+	
+	@Autowired
 	public void setMemberDao(MemberDao memberDao) {
 		this.memberDao = memberDao;
 	}
 
+	@Autowired
 	public void setPrinter(MemberPrinter memberPrinter) {
 		this.printer = memberPrinter;
 	}
